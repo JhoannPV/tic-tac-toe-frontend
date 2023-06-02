@@ -22,7 +22,7 @@ export default function Game() {
     } else {
       const getWinners = async () => {
         try{        
-          const response = await axios.get("https://service-frontend-tic-tac-toe.onrender.com/api/v1/winners", {
+          const response = await axios.get("https://service-backend-tic-tac-toe.onrender.com/api/v1/winners", {
           headers: {
             Authorization: `Bearer ${t}`,
           },
@@ -42,7 +42,7 @@ export default function Game() {
     };
     try {
       const t = localStorage.getItem("jwt-token");
-      const current_winner = await axios.post("https://service-frontend-tic-tac-toe.onrender.com/api/v1/winners", winner, {
+      const current_winner = await axios.post("https://service-backend-tic-tac-toe.onrender.com/api/v1/winners", winner, {
         headers: {
           Authorization: `Bearer ${t}`,
         },

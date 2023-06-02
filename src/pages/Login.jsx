@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     let credentials = { username, password };
     try {
-      const res = await axios.post("https://service-frontend-tic-tac-toe.onrender.com/api/v1/auth/signin", credentials);
+      const res = await axios.post("https://service-backend-tic-tac-toe.onrender.com/api/v1/auth/signin", credentials);
       const token = res.data.data.token;
       localStorage.setItem("jwt-token", token);
       console.log(localStorage.getItem("jwt-token"));
